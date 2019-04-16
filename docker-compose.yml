@@ -22,7 +22,7 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       
   producer:
-    image: ftp-starbeat-archive:1.2
+    image: ftp-starbeat-archive:1.0
     container_name: microservice-producer
     restart: always
     ports:
@@ -31,9 +31,12 @@ services:
       - kafka
     links:
       - kafka:kafka
+    environment:
+      PRODUCER_TOPIC: meter
+      CONSUMER_TOPIC: none
       
   consumer:
-    image: ftp-starbeat-archive:1.2
+    image: ftp-starbeat-archive:1.0
     container_name: microservice-consumer
     restart: always
     ports:
@@ -42,5 +45,8 @@ services:
       - kafka
     links:
       - kafka:kafka
+    environment:
+      PRODUCER_TOPIC: none
+      CONSUMER_TOPIC: meter
  
       
