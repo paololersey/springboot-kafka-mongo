@@ -21,4 +21,5 @@ public class MessageConsumer {
     	logger.info(String.format("#### -> Consumer topic -> %s", env.getProperty("CONSUMER_TOPIC")));
         logger.info(String.format("#### -> Consumed message -> %s", message));
     }
+    
 }

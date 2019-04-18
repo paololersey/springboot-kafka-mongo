@@ -20,7 +20,8 @@
 	</properties>
 
 	<dependencies>
-	
+
+		<!-- Spring boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -32,10 +33,26 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Kafka -->
 		<dependency>
 			<groupId>org.springframework.kafka</groupId>
 			<artifactId>spring-kafka</artifactId>
 		</dependency>
+
+		<!-- Mongo driver -->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>3.10.0</version>
+		</dependency>
+
+		<!-- Spring data mongodbr -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>2.1.6.RELEASE</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
