@@ -1,15 +1,16 @@
 spring:
    kafka:
      consumer:
-        bootstrap-servers: kafka:9092
+        bootstrap-servers: 192.168.99.100:9092
         group-id: group_id
         auto-offset-reset: earliest
+        enable-auto-commit: true
         key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
      producer:
-        bootstrap-servers: kafka:9092
+        bootstrap-servers: 192.168.99.100:9092
         key-serializer: org.apache.kafka.common.serialization.StringSerializer
         value-serializer: org.apache.kafka.common.serialization.StringSerializer    
    data:
      mongodb:
-        uri: mongodb://mongo:27000/log
+        uri: mongodb://192.168.99.100:27000/log
